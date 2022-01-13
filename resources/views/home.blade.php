@@ -5,6 +5,6 @@
 @section('content')
     <div class="container text-center">
         <h1>HOMEPAGE</h1>
-        <a href="">GO TO COMICS TABLE</a>
+        <a class="btn btn-primary" href="{{ route('comics.index') }}">Go to Comics</a>
     </div>
 @endsection
