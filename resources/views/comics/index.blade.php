@@ -11,8 +11,15 @@
         <ul>
             @foreach ($comics as $comic)
                 <li>{{ $comic['title'] }}
+                    {{-- show comic --}}
                     <span><a href="{{ route('comics.show', $comic) }}">Show</a></span>
+                    {{-- edit comic --}}
                     <span><a class="text-success" href="{{ route('comics.edit', $comic) }}">Edit</a></span>
+                    {{-- delete comic --}}
+                    <form action="{{ route('comics.destroy', $comic) }}" method="post">
+                        @method('DELETE')
+                        <input type="submit" value="Delete">
+                    </form>
                 </li>
             @endforeach
         </ul>
