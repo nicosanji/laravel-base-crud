@@ -10,8 +10,7 @@
     <div class="container">
         <ul>
             @foreach ($comics as $comic)
-                <li><a href="{{ route('comics.show', $comic->id) }} ">{{ $comic['title'] }}</a><span>
-                        ({{ $comic['type'] }})</span></li>
+                <li>{{ $comic['title'] }} <span><a href="{{ route('comics.show', $comic->id) }}">Show</a></span></li>
             @endforeach
         </ul>
     </div>

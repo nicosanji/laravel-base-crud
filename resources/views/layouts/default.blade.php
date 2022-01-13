@@ -13,16 +13,16 @@
 
 <body>
     <header>
-        <div class="container text-center">
-            <h4>COMICS HEADER</h4>
+        <div class="container text-center py-3">
+            <h1 class="text-primary">DC COMICS HEADER</h1>
         </div>
     </header>
     <main>
         @yield('content')
     </main>
     <footer>
-        <div class="container text-center">
-            <h4>COMICS FOOTER</h4>
+        <div class="container text-center py-3">
+            <p class="text-primary">DC COMICS FOOTER</p>
         </div>
     </footer>
 </body>

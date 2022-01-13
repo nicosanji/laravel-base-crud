@@ -22,7 +22,7 @@
         <form action=" {{ route('comics.store') }} " method="post">
             @csrf
             {{-- title --}}
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="field_title" class="form-label">Title</label>
                 <input type="text" class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" name="title"
                     id="field_title">
@@ -33,7 +33,7 @@
                 @endif
             </div>
             {{-- description --}}
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="field_description" class="form-label">Description</label>
                 <input type="text" class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}"
                     name="description" id="field_description">
@@ -44,7 +44,7 @@
                 @endif
             </div>
             {{-- thumb --}}
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="field_thumb" class="form-label">Thumb</label>
                 <input type="text" class="form-control {{ $errors->has('thumb') ? 'is-invalid' : '' }}" name="thumb"
                     id="field_thumb">
@@ -55,7 +55,7 @@
                 @endif
             </div>
             {{-- price --}}
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="field_price" class="form-label">Price</label>
                 <input type="text" class="form-control {{ $errors->has('price') ? 'is-invalid' : '' }}" name="price"
                     id="field_price">
@@ -66,7 +66,7 @@
                 @endif
             </div>
             {{-- series --}}
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="field_series" class="form-label">Series</label>
                 <input type="text" class="form-control {{ $errors->has('series') ? 'is-invalid' : '' }}" name="series"
                     id="field_series">
@@ -77,7 +77,7 @@
                 @endif
             </div>
             {{-- sale date --}}
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="field_sale_date" class="form-label">Sale Date</label>
                 <input type="text" class="form-control {{ $errors->has('sale_date') ? 'is-invalid' : '' }}"
                     name="sale_date" id="field_series">
@@ -88,7 +88,7 @@
                 @endif
             </div>
             {{-- type --}}
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="field_type" class="form-label">Type</label>
                 <input type="text" class="form-control {{ $errors->has('type') ? 'is-invalid' : '' }}" name="type"
                     id="field_series">

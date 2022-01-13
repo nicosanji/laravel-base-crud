@@ -56,7 +56,7 @@ class ComicController extends Controller
 
         $newComic->save();
 
-        return redirect()->route("comics.show", $newComic->id); //per mostrare l'elemento appena inserito
+        return redirect()->route("comics.show", $newComic->id);
     }
 
     /**
