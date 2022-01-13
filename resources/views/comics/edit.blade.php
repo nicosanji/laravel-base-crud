@@ -27,7 +27,7 @@
             <div class="mb-2">
                 <label for="field_title" class="form-label">Title</label>
                 <input type="text" class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" name="title"
-                    id="field_title">
+                    id="field_title" value="{{ $comic->title }}">
                 @if ($errors->has('title'))
                     <div class="invalid-feedback">
                         {{ $errors->get('title')[0] }}
@@ -38,7 +38,7 @@
             <div class="mb-2">
                 <label for="field_description" class="form-label">Description</label>
                 <input type="text" class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}"
-                    name="description" id="field_description">
+                    name="description" id="field_description" value="{{ $comic->description }}">
                 @if ($errors->has('description'))
                     <div class="invalid-feedback">
                         {{ $errors->get('description')[0] }}
@@ -49,7 +49,7 @@
             <div class="mb-2">
                 <label for="field_thumb" class="form-label">Thumb</label>
                 <input type="text" class="form-control {{ $errors->has('thumb') ? 'is-invalid' : '' }}" name="thumb"
-                    id="field_thumb">
+                    id="field_thumb" value="{{ $comic->thumb }}">
                 @if ($errors->has('thumb'))
                     <div class="invalid-feedback">
                         {{ $errors->get('thumb')[0] }}
@@ -60,7 +60,7 @@
             <div class="mb-2">
                 <label for="field_price" class="form-label">Price</label>
                 <input type="text" class="form-control {{ $errors->has('price') ? 'is-invalid' : '' }}" name="price"
-                    id="field_price">
+                    id="field_price" value="{{ $comic->price }}">
                 @if ($errors->has('price'))
                     <div class="invalid-feedback">
                         {{ $errors->get('price')[0] }}
@@ -71,7 +71,7 @@
             <div class="mb-2">
                 <label for="field_series" class="form-label">Series</label>
                 <input type="text" class="form-control {{ $errors->has('series') ? 'is-invalid' : '' }}" name="series"
-                    id="field_series">
+                    id="field_series" value="{{ $comic->series }}">
                 @if ($errors->has('series'))
                     <div class="invalid-feedback">
                         {{ $errors->get('series')[0] }}
@@ -82,7 +82,7 @@
             <div class="mb-2">
                 <label for="field_sale_date" class="form-label">Sale Date</label>
                 <input type="text" class="form-control {{ $errors->has('sale_date') ? 'is-invalid' : '' }}"
-                    name="sale_date" id="field_series">
+                    name="sale_date" id="field_series" value="{{ $comic->sale_date }}">
                 @if ($errors->has('sale_date'))
                     <div class="invalid-feedback">
                         {{ $errors->get('sale_date')[0] }}
@@ -93,7 +93,7 @@
             <div class="mb-2">
                 <label for="field_type" class="form-label">Type</label>
                 <input type="text" class="form-control {{ $errors->has('type') ? 'is-invalid' : '' }}" name="type"
-                    id="field_series">
+                    id="field_series" value="{{ $comic->type }}">
                 @if ($errors->has('type'))
                     <div class="invalid-feedback">
                         {{ $errors->get('type')[0] }}
@@ -103,7 +103,7 @@
 
             <div>
                 <button class="btn btn-secondary" type="reset ">Reset</button>
-                <button class="btn btn-primary" type="submit">Create</button>
+                <button class="btn btn-primary" type="submit">Save edit</button>
             </div>
 
         </form>
