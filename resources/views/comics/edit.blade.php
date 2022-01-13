@@ -19,7 +19,7 @@
             </div>
         @endif
         {{-- FORM EDIT --}}
-        <form action=" {{ route('comics.update', $comic) }} " method="post">
+        <form name="edit_form" action=" {{ route('comics.update', $comic) }} " method="post">
             @csrf
             {{-- method per edit --}}
             @method('PUT')
@@ -102,11 +102,18 @@
             </div>
 
             <div>
-                <button class="btn btn-secondary" type="reset ">Reset</button>
+                <button class="btn btn-secondary" type="reset">Reset</button>
                 <button class="btn btn-primary" type="submit">Save edit</button>
             </div>
-
         </form>
+        {{-- delete comic --}}
+        <form name="delete_form" action="{{ route('comics.destroy', $comic) }}" method="post">
+            @csrf
+            @method('DELETE')
+            <input type="hidden">
+            <button type="submit" class="btn btn-danger mt-1">Delete</button>
+        </form>
+        {{-- pulsanti index e home --}}
         <div class="container text-center">
             <a class="btn btn-primary" href="{{ route('comics.index') }}">Go to Comics</a>
             <a class="btn btn-primary" href="/">Home</a>
