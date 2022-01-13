@@ -19,7 +19,7 @@
             </div>
         @endif
         {{-- FORM EDIT --}}
-        <form action=" {{ route('comics.update', $comic->id) }} " method="post">
+        <form action=" {{ route('comics.update', $comic) }} " method="post">
             @csrf
             {{-- method per edit --}}
             @method('PUT')
